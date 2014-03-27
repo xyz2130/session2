@@ -46,7 +46,7 @@ app.post('/quote', function(req, res) {
 });
 
 app.get('/quote', function(req,res){
-	console.log('%d',quotes.length -1);
+	console.log('testest');
 	return res.send(quotes.length -1);
 });
 

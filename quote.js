@@ -45,6 +45,10 @@ app.post('/quote', function(req, res) {
   res.send(newQuote);
 });
 
+app.get('/quote', function(req,res){
+	return res.send(quotes.length -1);
+});
+
 app.delete('/quote/:id', function(req, res) {
   if(quotes.length <= req.params.id) {
 	res.statusCode = 404;

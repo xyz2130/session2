@@ -65,7 +65,11 @@ $(document).bind('pageinit', function() {
   	var newQuote = { "author" : a, "text" : q2 };
   	$.post(jsonUrl,newQuote, function(data) {
     	alert("Added " + data.author + " " + data.text);
+		
   	}, 'json');
+	$.get("http://localhost:3001", function(data){
+		$("#result").html("added to quote number "+data);
+	});
     });
 
 });

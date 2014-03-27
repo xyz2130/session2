@@ -48,7 +48,8 @@ app.post('/quote', function(req, res) {
 app.get('/quote', function(req,res){
 	console.log('testest');
 	console.log(quotes.length-1);
-	return res.send(quotes.length -1);
+	var len = quotes.lentgh-1;
+	return res.send(len);
 });
 
 app.delete('/quote/:id', function(req, res) {

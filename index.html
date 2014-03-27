@@ -67,7 +67,7 @@ $(document).bind('pageinit', function() {
     	alert("Added " + data.author + " " + data.text);
 		
   	}, 'json');
-	$.get("http://localhost:3001", function(data){
+	$.get("http://localhost:3001/quote", function(data){
 		$("#result").html("added to quote number "+data);
 	});
     });
